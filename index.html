@@ -1,1 +1,348 @@
-test2
+
+<!doctype html>
+<html lang="en">
+  <head>
+     <!-- Primary Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="stackboard is the best bookmarking tool to save, organize, and access your favorite websites from anywhere. Sync across all devices with powerful search and tagging features.">
+    <meta name="keywords" content="bookmarking tool, save websites, online bookmarks, bookmark manager, organize bookmarks, sync bookmarks, web favorites">
+    
+   
+    
+ <title>stackbaord | organize what matters</title>
+	
+	<link rel="canonical" href="https://stackboard.pro/" />
+	
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="stackboard | organize what matters" />
+	<meta property="og:description" content="TechCrunch | stackboard is the best bookmarking tool to save, organize, and access your favorite websites from anywhere." />
+	<meta property="og:url" content="https://techcrunch.com/" />
+	<meta property="og:site_name" content="stackboard" />
+	<meta property="og:image" content="https://pbs.twimg.com/media/GoJWWqsXIAA28rQ?format=jpg&name=small" />
+	<meta content="summary_large_image" name="twitter:card" /><meta content="@ycombinator" name="twitter:site" /><meta content="https://pbs.twimg.com/media/GoJWWqsXIAA28rQ?format=jpg&name=small" name="twitter:image" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Font_Awesome_5_solid_th-large.svg/2048px-Font_Awesome_5_solid_th-large.svg.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Font_Awesome_5_solid_th-large.svg/2048px-Font_Awesome_5_solid_th-large.svg.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Font_Awesome_5_solid_th-large.svg/2048px-Font_Awesome_5_solid_th-large.svg.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Font_Awesome_5_solid_th-large.svg/2048px-Font_Awesome_5_solid_th-large.svg.png" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+    <style>
+    body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}  
+    </style>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">stackboard</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Ai tuning guide</h1>
+      </div>
+      <div class="container">
+          <h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin-right: 0px; margin-bottom: 13.716px; margin-left: 0px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; margin-top: 0px !important;"><strong>Step-by-Step Guide: Fine-Tuning Llama 3 on a Single GPU</strong></h3>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><em>(Tested on 8B parameter model with 24GB VRAM)</em></p>
+<hr />
+<h4 style="font-weight: 500; font-size: 16.002px; line-height: 28.575px; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>🔧 Prerequisites</strong></h4>
+<ol start="1" style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;"><strong>Hardware:</strong></p>
+<ul style="margin: 4px 0px 0px; padding-left: 27.432px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">NVIDIA GPU (<strong>24GB+ VRAM</strong>&nbsp;for full fine-tuning,&nbsp;<strong>10GB+</strong>&nbsp;for LoRA)</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Linux (Ubuntu recommended)</p>
+</li>
+</ul>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;"><strong>Software:</strong></p>
+<ul style="margin: 4px 0px 0px; padding-left: 27.432px;">
+<li>
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Python 3.10+</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">PyTorch 2.0+ with CUDA</p>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px !important; margin-left: 0px; font-size: 16.002px; line-height: 28.575px;">Hugging Face libraries (<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">transformers</code>,&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">datasets</code>,&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">peft</code>,&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">trl</code>)</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">bash</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">pip <span class="token function" style="color: #88c0d0;">install</span> torch transformers datasets peft trl accelerate bitsandbytes</pre>
+</div>
+<hr />
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>🚀 Step 1: Prepare Your Dataset</strong></h3>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">Format:&nbsp;<strong>JSONL</strong>&nbsp;(one JSON per line) with&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">instruction</code>,&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">input</code>,&nbsp;<code style="font-size: 0.875em; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">output</code>&nbsp;fields:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">json</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;"><span class="token punctuation" style="color: #81a1c1;">{</span><span class="token property" style="color: #81a1c1;">"instruction"</span><span class="token operator" style="color: #81a1c1;">:</span> <span class="token string" style="color: #a3be8c;">"Translate to French"</span><span class="token punctuation" style="color: #81a1c1;">,</span> <span class="token property" style="color: #81a1c1;">"input"</span><span class="token operator" style="color: #81a1c1;">:</span> <span class="token string" style="color: #a3be8c;">"Hello"</span><span class="token punctuation" style="color: #81a1c1;">,</span> <span class="token property" style="color: #81a1c1;">"output"</span><span class="token operator" style="color: #81a1c1;">:</span> <span class="token string" style="color: #a3be8c;">"Bonjour"</span><span class="token punctuation" style="color: #81a1c1;">}</span>
+<span class="token punctuation" style="color: #81a1c1;">{</span><span class="token property" style="color: #81a1c1;">"instruction"</span><span class="token operator" style="color: #81a1c1;">:</span> <span class="token string" style="color: #a3be8c;">"Explain gravity"</span><span class="token punctuation" style="color: #81a1c1;">,</span> <span class="token property" style="color: #81a1c1;">"input"</span><span class="token operator" style="color: #81a1c1;">:</span> <span class="token string" style="color: #a3be8c;">""</span><span class="token punctuation" style="color: #81a1c1;">,</span> <span class="token property" style="color: #81a1c1;">"output"</span><span class="token operator" style="color: #81a1c1;">:</span> <span class="token string" style="color: #a3be8c;">"Gravity is..."</span><span class="token punctuation" style="color: #81a1c1;">}</span></pre>
+</div>
+<p style="margin: 13.716px 0px; font-size: 16.002px; line-height: 28.575px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">➡&nbsp;<strong>Save as&nbsp;<code style="font-size: 0.875em; font-weight: 500; font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; background-color: #ececec; border-radius: 4px; padding: 0.15rem 0.3rem;">dataset.jsonl</code></strong>.</p>
+<hr />
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>📦 Step 2: Load Model &amp; Tokenizer</strong></h3>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">python</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;"><span class="token keyword" style="color: #81a1c1;">from</span> transformers <span class="token keyword" style="color: #81a1c1;">import</span> AutoModelForCausalLM<span class="token punctuation" style="color: #81a1c1;">,</span> AutoTokenizer
+
+model_id <span class="token operator" style="color: #81a1c1;">=</span> <span class="token string" style="color: #a3be8c;">"meta-llama/Meta-Llama-3-8B"</span>
+tokenizer <span class="token operator" style="color: #81a1c1;">=</span> AutoTokenizer<span class="token punctuation" style="color: #81a1c1;">.</span>from_pretrained<span class="token punctuation" style="color: #81a1c1;">(</span>model_id<span class="token punctuation" style="color: #81a1c1;">)</span>
+model <span class="token operator" style="color: #81a1c1;">=</span> AutoModelForCausalLM<span class="token punctuation" style="color: #81a1c1;">.</span>from_pretrained<span class="token punctuation" style="color: #81a1c1;">(</span>
+    model_id<span class="token punctuation" style="color: #81a1c1;">,</span>
+    torch_dtype<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"auto"</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+    device_map<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"auto"</span>
+<span class="token punctuation" style="color: #81a1c1;">)</span>
+tokenizer<span class="token punctuation" style="color: #81a1c1;">.</span>pad_token <span class="token operator" style="color: #81a1c1;">=</span> tokenizer<span class="token punctuation" style="color: #81a1c1;">.</span>eos_token  <span class="token comment" style="color: #636f88;"># Set padding token</span></pre>
+</div>
+<hr />
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>🎯 Step 3: Choose Fine-Tuning Method</strong></h3>
+<h4 style="font-weight: 500; font-size: 16.002px; line-height: 28.575px; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>Option A: LoRA (Low-Rank Adaptation) - Best for 10-24GB GPUs</strong></h4>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">python</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;"><span class="token keyword" style="color: #81a1c1;">from</span> peft <span class="token keyword" style="color: #81a1c1;">import</span> LoraConfig
+
+peft_config <span class="token operator" style="color: #81a1c1;">=</span> LoraConfig<span class="token punctuation" style="color: #81a1c1;">(</span>
+    r<span class="token operator" style="color: #81a1c1;">=</span><span class="token number" style="color: #b48ead;">8</span><span class="token punctuation" style="color: #81a1c1;">,</span>                  <span class="token comment" style="color: #636f88;"># Rank</span>
+    lora_alpha<span class="token operator" style="color: #81a1c1;">=</span><span class="token number" style="color: #b48ead;">32</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+    target_modules<span class="token operator" style="color: #81a1c1;">=</span><span class="token punctuation" style="color: #81a1c1;">[</span><span class="token string" style="color: #a3be8c;">"q_proj"</span><span class="token punctuation" style="color: #81a1c1;">,</span> <span class="token string" style="color: #a3be8c;">"v_proj"</span><span class="token punctuation" style="color: #81a1c1;">]</span><span class="token punctuation" style="color: #81a1c1;">,</span>  <span class="token comment" style="color: #636f88;"># Llama 3 attention layers</span>
+    lora_dropout<span class="token operator" style="color: #81a1c1;">=</span><span class="token number" style="color: #b48ead;">0.05</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+    bias<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"none"</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+    task_type<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"CAUSAL_LM"</span>
+<span class="token punctuation" style="color: #81a1c1;">)</span></pre>
+</div>
+<h4 style="font-weight: 500; font-size: 16.002px; line-height: 28.575px; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>Option B: QLoRA (4-bit Quantization) - For 10GB GPUs</strong></h4>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">python</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;"><span class="token keyword" style="color: #81a1c1;">from</span> transformers <span class="token keyword" style="color: #81a1c1;">import</span> BitsAndBytesConfig
+
+bnb_config <span class="token operator" style="color: #81a1c1;">=</span> BitsAndBytesConfig<span class="token punctuation" style="color: #81a1c1;">(</span>
+    load_in_4bit<span class="token operator" style="color: #81a1c1;">=</span><span class="token boolean" style="color: #81a1c1;">True</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+    bnb_4bit_quant_type<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"nf4"</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+    bnb_4bit_compute_dtype<span class="token operator" style="color: #81a1c1;">=</span>torch<span class="token punctuation" style="color: #81a1c1;">.</span>float16
+<span class="token punctuation" style="color: #81a1c1;">)</span>
+
+model <span class="token operator" style="color: #81a1c1;">=</span> AutoModelForCausalLM<span class="token punctuation" style="color: #81a1c1;">.</span>from_pretrained<span class="token punctuation" style="color: #81a1c1;">(</span>
+    model_id<span class="token punctuation" style="color: #81a1c1;">,</span>
+    quantization_config<span class="token operator" style="color: #81a1c1;">=</span>bnb_config<span class="token punctuation" style="color: #81a1c1;">,</span>  <span class="token comment" style="color: #636f88;"># Add this line</span>
+    device_map<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"auto"</span>
+<span class="token punctuation" style="color: #81a1c1;">)</span></pre>
+</div>
+<hr />
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>⚙️ Step 4: Train with TRL (Transformer Reinforcement Learning)</strong></h3>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">python</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;"><span class="token keyword" style="color: #81a1c1;">from</span> trl <span class="token keyword" style="color: #81a1c1;">import</span> SFTTrainer
+<span class="token keyword" style="color: #81a1c1;">from</span> datasets <span class="token keyword" style="color: #81a1c1;">import</span> load_dataset
+
+dataset <span class="token operator" style="color: #81a1c1;">=</span> load_dataset<span class="token punctuation" style="color: #81a1c1;">(</span><span class="token string" style="color: #a3be8c;">"json"</span><span class="token punctuation" style="color: #81a1c1;">,</span> data_files<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"dataset.jsonl"</span><span class="token punctuation" style="color: #81a1c1;">,</span> split<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"train"</span><span class="token punctuation" style="color: #81a1c1;">)</span>
+
+trainer <span class="token operator" style="color: #81a1c1;">=</span> SFTTrainer<span class="token punctuation" style="color: #81a1c1;">(</span>
+    model<span class="token operator" style="color: #81a1c1;">=</span>model<span class="token punctuation" style="color: #81a1c1;">,</span>
+    train_dataset<span class="token operator" style="color: #81a1c1;">=</span>dataset<span class="token punctuation" style="color: #81a1c1;">,</span>
+    peft_config<span class="token operator" style="color: #81a1c1;">=</span>peft_config<span class="token punctuation" style="color: #81a1c1;">,</span>  <span class="token comment" style="color: #636f88;"># Remove if full fine-tuning</span>
+    dataset_text_field<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"output"</span><span class="token punctuation" style="color: #81a1c1;">,</span>  <span class="token comment" style="color: #636f88;"># Your target column</span>
+    max_seq_length<span class="token operator" style="color: #81a1c1;">=</span><span class="token number" style="color: #b48ead;">512</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+    tokenizer<span class="token operator" style="color: #81a1c1;">=</span>tokenizer<span class="token punctuation" style="color: #81a1c1;">,</span>
+    args<span class="token operator" style="color: #81a1c1;">=</span><span class="token punctuation" style="color: #81a1c1;">{</span>
+        <span class="token string" style="color: #a3be8c;">"per_device_train_batch_size"</span><span class="token punctuation" style="color: #81a1c1;">:</span> <span class="token number" style="color: #b48ead;">4</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+        <span class="token string" style="color: #a3be8c;">"gradient_accumulation_steps"</span><span class="token punctuation" style="color: #81a1c1;">:</span> <span class="token number" style="color: #b48ead;">2</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+        <span class="token string" style="color: #a3be8c;">"warmup_steps"</span><span class="token punctuation" style="color: #81a1c1;">:</span> <span class="token number" style="color: #b48ead;">100</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+        <span class="token string" style="color: #a3be8c;">"num_train_epochs"</span><span class="token punctuation" style="color: #81a1c1;">:</span> <span class="token number" style="color: #b48ead;">3</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+        <span class="token string" style="color: #a3be8c;">"learning_rate"</span><span class="token punctuation" style="color: #81a1c1;">:</span> <span class="token number" style="color: #b48ead;">2e-5</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+        <span class="token string" style="color: #a3be8c;">"fp16"</span><span class="token punctuation" style="color: #81a1c1;">:</span> <span class="token boolean" style="color: #81a1c1;">True</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+        <span class="token string" style="color: #a3be8c;">"logging_steps"</span><span class="token punctuation" style="color: #81a1c1;">:</span> <span class="token number" style="color: #b48ead;">10</span><span class="token punctuation" style="color: #81a1c1;">,</span>
+        <span class="token string" style="color: #a3be8c;">"output_dir"</span><span class="token punctuation" style="color: #81a1c1;">:</span> <span class="token string" style="color: #a3be8c;">"outputs"</span>
+    <span class="token punctuation" style="color: #81a1c1;">}</span>
+<span class="token punctuation" style="color: #81a1c1;">)</span>
+
+trainer<span class="token punctuation" style="color: #81a1c1;">.</span>train<span class="token punctuation" style="color: #81a1c1;">(</span><span class="token punctuation" style="color: #81a1c1;">)</span></pre>
+</div>
+<hr />
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>💾 Step 5: Save &amp; Deploy</strong></h3>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 11.43px; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">python</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;"><span class="token comment" style="color: #636f88;"># Save LoRA adapter</span>
+trainer<span class="token punctuation" style="color: #81a1c1;">.</span>save_model<span class="token punctuation" style="color: #81a1c1;">(</span><span class="token string" style="color: #a3be8c;">"llama3-lora-ft"</span><span class="token punctuation" style="color: #81a1c1;">)</span>
+
+<span class="token comment" style="color: #636f88;"># Merge adapter with base model (optional)</span>
+<span class="token keyword" style="color: #81a1c1;">from</span> peft <span class="token keyword" style="color: #81a1c1;">import</span> PeftModel
+merged_model <span class="token operator" style="color: #81a1c1;">=</span> PeftModel<span class="token punctuation" style="color: #81a1c1;">.</span>merge_and_unload<span class="token punctuation" style="color: #81a1c1;">(</span>model<span class="token punctuation" style="color: #81a1c1;">)</span>
+merged_model<span class="token punctuation" style="color: #81a1c1;">.</span>save_pretrained<span class="token punctuation" style="color: #81a1c1;">(</span><span class="token string" style="color: #a3be8c;">"llama3-merged"</span><span class="token punctuation" style="color: #81a1c1;">)</span></pre>
+</div>
+<hr />
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>🔥 Expected Performance</strong></h3>
+<table style="border-collapse: collapse; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<thead>
+<tr><th style="padding: 6.858px 13.716px 6.858px 0px; border-bottom: 1px solid #a3a3a3; border-top: 1px solid #a3a3a3; text-align: left;">Method</th><th style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3; border-top: 1px solid #a3a3a3; text-align: left;">VRAM Usage</th><th style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3; border-top: 1px solid #a3a3a3; text-align: left;">Time (8B model)</th><th style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3; border-top: 1px solid #a3a3a3; text-align: left;">Quality Retention</th></tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 6.858px 13.716px 6.858px 0px; border-bottom: 1px solid #a3a3a3;">Full Fine-Tune</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">24GB+</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">~8 hours</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">★★★★★</td>
+</tr>
+<tr>
+<td style="padding: 6.858px 13.716px 6.858px 0px; border-bottom: 1px solid #a3a3a3;">LoRA</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">10-16GB</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">~3 hours</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">★★★★☆</td>
+</tr>
+<tr>
+<td style="padding: 6.858px 13.716px 6.858px 0px; border-bottom: 1px solid #a3a3a3;">QLoRA</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">6-10GB</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">~5 hours</td>
+<td style="padding: 6.858px 13.716px; border-bottom: 1px solid #a3a3a3;">★★★☆☆</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 style="font-weight: 500; font-size: 18.288px; line-height: 1.5; margin: 18.288px 0px 13.716px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif;"><strong>💡 Pro Tips</strong></h3>
+<ol start="1" style="margin: 13.716px 0px; padding-left: 27.432px; color: #404040; font-family: DeepSeek-CJK-patch, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell, 'Helvetica Neue', Oxygen, 'Open Sans', sans-serif; font-size: 16.002px;">
+<li>
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;"><strong>Gradient Checkpointing</strong>&nbsp;(reduce VRAM):</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 0px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">python</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">model<span class="token punctuation" style="color: #81a1c1;">.</span>gradient_checkpointing_enable<span class="token punctuation" style="color: #81a1c1;">(</span><span class="token punctuation" style="color: #81a1c1;">)</span></pre>
+</div>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;"><strong>Use Flash Attention 2</strong>&nbsp;(20% faster):</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 0px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">python</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">model <span class="token operator" style="color: #81a1c1;">=</span> AutoModelForCausalLM<span class="token punctuation" style="color: #81a1c1;">.</span>from_pretrained<span class="token punctuation" style="color: #81a1c1;">(</span><span class="token punctuation" style="color: #81a1c1;">.</span><span class="token punctuation" style="color: #81a1c1;">.</span><span class="token punctuation" style="color: #81a1c1;">.</span><span class="token punctuation" style="color: #81a1c1;">,</span> attn_implementation<span class="token operator" style="color: #81a1c1;">=</span><span class="token string" style="color: #a3be8c;">"flash_attention_2"</span><span class="token punctuation" style="color: #81a1c1;">)</span></pre>
+</div>
+</li>
+<li style="margin-top: 4px;">
+<p style="margin: 0px 0px 4px; font-size: 16.002px; line-height: 28.575px;"><strong>Monitor with Weights &amp; Biases</strong>:</p>
+<div class="md-code-block md-code-block-dark" style="--ds-md-code-block-border-color: rgb(255 255 255); --ds-md-code-block-banner-wrap-background-color: #292a2d; --ds-md-code-banner-background-color: #404045; color: #ffffff; background: #181d28; --ds-md-code-block-border-radius: 12px; --ds-md-code-block-font-size: calc(1.143*11px); border-radius: 12px; font-size: 12.573px; line-height: 20.1168px; margin-bottom: 0px;">
+<div class="md-code-block-banner-wrap" style="background-color: #ffffff !important; position: sticky; top: 0px;">
+<div class="md-code-block-banner" style="background: none 0% 0% / auto repeat scroll padding-box border-box #404045; padding: 9.144px 13.716px; font-size: 12.573px; line-height: 12.573px; border-top-left-radius: 12px; border-top-right-radius: 12px; justify-content: space-between; display: flex;">
+<div class="md-code-block-infostring">bash</div>
+<div class="md-code-block-action" style="align-items: center; display: flex;">
+<div class="ds-markdown-code-copy-button" style="background-color: rgba(255, 255, 255, 0); color: inherit; cursor: pointer; border: none; margin: 0px; padding: 0px;">Copy</div>
+</div>
+</div>
+</div>
+<pre style="font-family: Menlo, 'Roboto Mono', 'Courier New', Courier, monospace, Inter, sans-serif; overflow: auto; padding: 9.144px 13.716px; text-wrap-mode: wrap; word-break: break-all; margin: 0px !important;">pip <span class="token function" style="color: #88c0d0;">install</span> wandb
+wandb login</pre>
+</div>
+</li>
+<li style="margin-top: 4px;">
+<p></p>
+</li>
+</ol>
+        <br>
+   
+        <a href="#">Try stackboard</a>
+      </div>
+
+    </main>
+  </body>
+</html>
+
